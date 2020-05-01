@@ -1,0 +1,23 @@
+@use "sass:color";
+
+$background-color: hsl(0, 0%, 95%) !default;
+
+$graph-paper-background: true !default;
+$graph-paper-line-color: null;
+@if (color.lightness($background-color) > 50%) {
+  $graph-paper-line-color: color.adjust($background-color, $lightness: -8%) !default !global;
+} @else {
+  $graph-paper-line-color: color.adjust($background-color, $lightness: +8%) !default !global;
+}
+
+$header-background-color: #408db8 !default;
+$header-text-color: rgba(255, 255, 255, 0.8) !default;
+
+$page-background-color: #ffffff !default;
+$page-shadow-color: #000000 !default;
+$page-text-color: rgba(0, 0, 0, 0.9) !default;
+
+$footer-background-color: #142c39 !default;
+$footer-text-color: rgba(255, 255, 255, 0.8) !default;
+
+

@@ -1,0 +1,65 @@
+@use "fontawesome-free/fontawesome" as fa;
+@use "fontawesome-free/solid" as fas with (
+  $fa-font-path: "../webfonts/fontawesome-free"
+);
+
+// custom Font Awesome icon classes
+.icon-repository {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa.fa-content(fa.$fa-var-database);
+  }
+}
+
+.icon-path {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa.fa-content(fa.$fa-var-folder-open);
+  }
+}
+
+.icon-folder {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa.fa-content(fa.$fa-var-folder);
+  }
+}
+
+.icon-file {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa.fa-content(fa.$fa-var-file);
+  }
+}
+
+.icon-heart {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa.fa-content(fa.$fa-var-heart);
+  }
+}
+
+.with-icon-prefix {
+  margin-left: fa.$fa-fw-width * 1.15;
+  padding-left: 0;
+  position: relative;
+  line-height: inherit;
+}
+
+.icon-prefix {
+  left: -(fa.$fa-fw-width * 1.15);
+  position: absolute;
+  text-align: center;
+  width: fa.$fa-fw-width;
+  line-height: inherit;
+}

@@ -1,0 +1,9 @@
+$-font-path: "../webfonts/lato";
+
+@font-face {
+  font-family: "LatoLatinWeb";
+  src: url("#{$-font-path}/LatoLatin-Regular.woff2") format("woff2"), url("#{$-font-path}/LatoLatin-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+  font-feature-settings: "liga" 0;
+}

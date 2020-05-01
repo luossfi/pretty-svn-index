@@ -1,0 +1,131 @@
+/*!
+ * Pretty SVN Index - Copyright (C) 2020++ Steff Lukas <steff.lukas@luossfi.org>
+ * License - GPLv3 or later (https://www.gnu.org/licenses/)
+ */
+@forward "variables";
+@use "variables" as vars;
+@use "sass:color" as color;
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+%no-margin-padding {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  @extend %no-margin-padding;
+  // this makes calculating font sizes easy: 10px = 1rem for a browser default font-size of 16px
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  @extend %no-margin-padding;
+  height: 100%;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  direction: ltr;
+  background-color: vars.$background-color;
+  @if (vars.$graph-paper-background) {
+    $major-line-color: vars.$graph-paper-line-color;
+    $minor-line-color: color.adjust(vars.$graph-paper-line-color, $alpha: -0.3);
+    background-image: linear-gradient($major-line-color 2px, transparent 2px), linear-gradient(90deg, $major-line-color 2px, transparent 2px), linear-gradient($minor-line-color 1px, transparent 1px), linear-gradient(90deg, $minor-line-color 1px, transparent 1px);
+    background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  }
+}
+
+div, li, p, span {
+  @extend %no-margin-padding;
+}
+
+ul {
+  @extend %no-margin-padding;
+  list-style: none;
+}
+
+h1, h2 {
+  @extend %no-margin-padding;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover, &:active {
+    text-decoration: underline;
+  }
+}
+
+.page-wrapper {
+  @extend %no-margin-padding;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  min-height: 100%;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+
+  > * {
+    box-sizing: content-box;
+    padding: 1em 1.5rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 80em) {
+  .page-wrapper {
+    margin: 0 auto 16px;
+    min-height: calc(100% - 16px);
+    max-width: 80em;
+    box-shadow: 0 4px 8px 0 color.change(vars.$page-shadow-color, $alpha: 0.2), 0 6px 20px 0 color.change(vars.$page-shadow-color, $alpha: 0.19);
+  }
+}
+
+header {
+  flex: none;
+  order: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: vars.$header-text-color;
+  background-color: vars.$header-background-color;
+}
+
+main {
+  flex: 1;
+  order: 2;
+  color: vars.$page-text-color;
+  background-color: vars.$page-background-color;
+  font-size: 1.8rem;
+}
+
+footer {
+  flex: none;
+  order: 3;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  line-height: 1;
+  font-size: 1.4rem;
+  color: vars.$footer-text-color;
+  background-color: vars.$footer-background-color;
+
+  > * {
+    @extend %no-margin-padding;
+  }
+
+  .credits {
+    color: color.scale(vars.$footer-text-color, $alpha: -60%);
+  }
+}
