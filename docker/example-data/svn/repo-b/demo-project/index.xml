@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="/pretty-svn-index.xsl"?>
+<!DOCTYPE svn [<!ELEMENT svn   (index)>
+    <!ATTLIST svn   version CDATA #REQUIRED
+        href    CDATA #REQUIRED>
+    <!ELEMENT index (updir?, (file | dir)*)>
+    <!ATTLIST index name    CDATA #IMPLIED
+        path    CDATA #IMPLIED
+        rev     CDATA #IMPLIED
+        base    CDATA #IMPLIED>
+    <!ELEMENT updir EMPTY>
+    <!ATTLIST updir href    CDATA #REQUIRED>
+    <!ELEMENT file  EMPTY>
+    <!ATTLIST file  name    CDATA #REQUIRED
+        href    CDATA #REQUIRED>
+    <!ELEMENT dir   EMPTY>
+    <!ATTLIST dir   name    CDATA #REQUIRED
+        href    CDATA #REQUIRED>]>
+<svn version="1.13.0 (r1867053)" href="https://subversion.apache.org">
+  <index rev="42"
+         base="repo-b"
+         name="Pretty SVN Index"
+         path="/demo-project/trunk">
+    <updir href="../"/>
+    <file name="build.gradle.kts" href="./"/>
+    <file name="COPYING" href="./"/>
+    <dir name="documentation" href="./"/>
+    <dir name="examples" href="./"/>
+    <dir name="gradle" href="./"/>
+    <file name="gradle.properties" href="./"/>
+    <file name="gradlew" href="./"/>
+    <file name="gradlew.bat" href="./"/>
+    <file name="README.adoc" href="./"/>
+    <dir name="src" href="./"/>
+    <file name="settings.gradle.kts" href="./"/>
+  </index>
+</svn>

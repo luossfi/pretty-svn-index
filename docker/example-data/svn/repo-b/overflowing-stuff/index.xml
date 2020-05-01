@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="/pretty-svn-index.xsl"?>
+<!DOCTYPE svn [<!ELEMENT svn   (index)>
+    <!ATTLIST svn   version CDATA #REQUIRED
+        href    CDATA #REQUIRED>
+    <!ELEMENT index (updir?, (file | dir)*)>
+    <!ATTLIST index name    CDATA #IMPLIED
+        path    CDATA #IMPLIED
+        rev     CDATA #IMPLIED
+        base    CDATA #IMPLIED>
+    <!ELEMENT updir EMPTY>
+    <!ATTLIST updir href    CDATA #REQUIRED>
+    <!ELEMENT file  EMPTY>
+    <!ATTLIST file  name    CDATA #REQUIRED
+        href    CDATA #REQUIRED>
+    <!ELEMENT dir   EMPTY>
+    <!ATTLIST dir   name    CDATA #REQUIRED
+        href    CDATA #REQUIRED>]>
+<svn version="1.13.0 (r1867053)" href="https://subversion.apache.org">
+  <index rev="42"
+         base="repo-b"
+         name="Pretty SVN Index"
+         path="/overflowing-stuff/trunk/some_really_insanely_long_and_hard_to_read_path_to_demonstrate_wrapping_in_the_page_title_section-also_try_resizing_your_browser_window">
+    <updir href="../"/>
+    <file name="a_file_with_also_a_maddening_long_name-really_which_kind_of_a_developer_would_do_such_evil_things_well_I_hope_none_but_this_is_useful_to_demonstrate_wrapping"
+          href="./"/>
+    <dir name="a_directory_with_again_a_maddening_long_name-really_which_kind_of_a_developer_would_do_such_evil_things_well_I_hope_none_but_this_is_useful_to_demonstrate_wrapping"
+         href="./"/>
+    <dir name="x-dir-01" href="./"/>
+    <dir name="x-dir-02" href="./"/>
+    <dir name="x-dir-03" href="./"/>
+    <dir name="x-dir-04" href="./"/>
+    <dir name="x-dir-05" href="./"/>
+    <dir name="x-dir-06" href="./"/>
+    <dir name="x-dir-07" href="./"/>
+    <dir name="x-dir-08" href="./"/>
+    <dir name="x-dir-09" href="./"/>
+    <dir name="x-dir-10" href="./"/>
+    <dir name="x-dir-11" href="./"/>
+    <dir name="x-dir-12" href="./"/>
+    <file name="x-file-01" href="./"/>
+    <file name="x-file-02" href="./"/>
+    <file name="x-file-03" href="./"/>
+    <file name="x-file-04" href="./"/>
+    <file name="x-file-05" href="./"/>
+    <file name="x-file-06" href="./"/>
+    <file name="x-file-07" href="./"/>
+    <file name="x-file-08" href="./"/>
+    <file name="x-file-09" href="./"/>
+    <file name="x-file-10" href="./"/>
+    <file name="x-file-11" href="./"/>
+    <file name="x-file-12" href="./"/>
+  </index>
+</svn>

@@ -69,6 +69,19 @@ The following table lists all available variables and their type:
 |`footer-text-color`|color|The color of the page footer's text.
 |===
 
+== Demo Docker Container
+
+Pretty SVN Index ships with a Dockerfile which can be used to create Docker images demonstrating various aspects of the theme.
+To build and run the image do the following:
+
+----
+./gradlew installDist \
+&& docker build -f ./docker/Dockerfile -t pretty-svn-index-demo:1.0 . \
+&& docker run --rm -dit --name pretty-svn-index-demo -p 127.0.0.1:8080:80 pretty-svn-index-demo:1.0
+----
+
+After the commands above finished successfully the Pretty SVN Index demo can be accessed by `http://localhost:8080/svn/[^]`.
+
 == Acknowledgments
 
 Pretty SVN Index wouldn't be half as good without the beautiful http://www.latofonts.com[Lato font ^]family^, and the awesome icon set https://fontawesome.com[Font Awesome^].

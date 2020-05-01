@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="/pretty-svn-index.xsl"?>
+<!DOCTYPE svn [
+    <!ELEMENT svn   (index)>
+    <!ATTLIST svn   version CDATA #REQUIRED
+        href    CDATA #REQUIRED>
+    <!ELEMENT index (updir?, (file | dir)*)>
+    <!ATTLIST index name    CDATA #IMPLIED
+        path    CDATA #IMPLIED
+        rev     CDATA #IMPLIED
+        base    CDATA #IMPLIED>
+    <!ELEMENT updir EMPTY>
+    <!ATTLIST updir href    CDATA #REQUIRED>
+    <!ELEMENT file  EMPTY>
+    <!ATTLIST file  name    CDATA #REQUIRED
+        href    CDATA #REQUIRED>
+    <!ELEMENT dir   EMPTY>
+    <!ATTLIST dir   name    CDATA #REQUIRED
+        href    CDATA #REQUIRED>
+    ]>
+<svn version="1.13.0 (r1867053)"
+     href="http://subversion.apache.org/">
+  <index name="Pretty SVN Index" rev="42" path="/project-a2" base="repo-a">
+    <updir href="../"/>
+    <dir name="trunk" href="trunk/"/>
+  </index>
+</svn>
+
